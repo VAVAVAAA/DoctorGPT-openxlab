@@ -4,15 +4,17 @@ os.system(f"git clone -b v2.1 https://github.com/camenduru/text-generation-webui
 os.chdir(f"/home/xlab-app-center/text-generation-webui")
 os.system(f"git reset --hard")
 
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//pytorch_model-00001-of-00002.bin -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o pytorch_model-00001-of-00002.bin")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//pytorch_model-00002-of-00002.bin -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o pytorch_model-00002-of-00002.bin")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//config.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o config.json")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//generation_config.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o generation_config.json")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//pytorch_model.bin.index.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o pytorch_model.bin.index.json")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//special_tokens_map.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o special_tokens_map.json")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer.json")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer_config.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer_config.json")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer.model -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer.model")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://code.openxlab.org.cn/api/v1/repos/mofashi/dp/media/.gitattributes?ref=main&nonce=1738676478893&access_token=b71098163dc6414e92add8d39e39e966c1389aae -d /home/xlab-app-center/text-generation-webui/models/dp")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://code.openxlab.org.cn/api/v1/repos/mofashi/dp/media/LICENSE?ref=main&nonce=1738676603797&access_token=b71098163dc6414e92add8d39e39e966c1389aae -d /home/xlab-app-center/text-generation-webui/models/dp")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/repos/file/mofashi/dp/main?filepath=config.json&sign=5f7d90a55ef46498518f9da82f7eb4d9&nonce=1738676647260 -d /home/xlab-app-center/text-generation-webui/models/dp")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://code.openxlab.org.cn/api/v1/repos/mofashi/dp/media/generation_config.json?ref=main&nonce=1738676697463&access_token=b71098163dc6414e92add8d39e39e966c1389aae -d /home/xlab-app-center/text-generation-webui/models/dp -o generation_config.json")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/repos/file/mofashi/dp/main?filepath=model.safetensors&sign=b3e866521971beeba628aca1062b30cb&nonce=1738676734349 -d /home/xlab-app-center/text-generation-webui/models/dp -o model.safetensors")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/repos/file/mofashi/dp/main?filepath=tokenizer.json&sign=c6c73e62e98565110e56014ffbff1360&nonce=1738676774298 -d /home/xlab-app-center/text-generation-webui/models/dp")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/repos/file/mofashi/dp/main?filepath=tokenizer_config.json&sign=9d04152064167a829c4995f70dc8d569&nonce=1738676819419 -d /home/xlab-app-center/text-generation-webui/models/dp")
+
+
+#os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer_config.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer_config.json")
+#os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer.model -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer.model")
 
 os.system(f"sed -i -e '/gr.Blocks/r /home/xlab-app-center/header.py' /home/xlab-app-center/text-generation-webui/server.py")
 os.system(f"sed -i '/def create_ui():/a\  with gr.Box(visible=False):' /home/xlab-app-center/text-generation-webui/modules/ui_default.py")
