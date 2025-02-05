@@ -4,9 +4,9 @@ os.system(f"git clone -b v2.1 https://github.com/camenduru/text-generation-webui
 os.chdir(f"/home/xlab-app-center/text-generation-webui")
 os.system(f"git reset --hard")
 
-os.system("pip install openxlab")
-os.system("pip install -U openxlab")
-openxlab.login(ak='xa5ag8yyvwpqkxw839pw', sk='l8njwnadbjgdwxe1zn83olme31xpparlo2q7vkmo')
+# os.system("pip install openxlab")
+# os.system("pip install -U openxlab")
+# openxlab.login(ak='xa5ag8yyvwpqkxw839pw', sk='l8njwnadbjgdwxe1zn83olme31xpparlo2q7vkmo')
 
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://code.openxlab.org.cn/api/v1/repos/mofashi/dp/media/.gitattributes?ref=main&nonce=1738676478893&access_token=b71098163dc6414e92add8d39e39e966c1389aae -d /home/xlab-app-center/text-generation-webui/models/dp")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://code.openxlab.org.cn/api/v1/repos/mofashi/dp/media/LICENSE?ref=main&nonce=1738676603797&access_token=b71098163dc6414e92add8d39e39e966c1389aae -d /home/xlab-app-center/text-generation-webui/models/dp")
